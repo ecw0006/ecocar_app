@@ -6,7 +6,8 @@ import SettingsScreen from './components/SettingsScreen';
 import Homescreen from './components/Homescreen';
 import SymbolDictionary from './components/SymbolDictionary';
 
-//test
+//test feature branch
+
 
 
 const Drawer = createDrawerNavigator();
