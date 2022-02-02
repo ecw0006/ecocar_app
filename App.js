@@ -2,10 +2,13 @@ import * as React from 'react';
 import { Button, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import SettingsScreen from './components/SettingsScreen';
+import InteractiveWheel from './components/InteractiveWheel';
 import Homescreen from './components/Homescreen';
 import SymbolDictionary from './components/SymbolDictionary';
 import VideoScreen from './components/VideoScreen';
+import { AntDesign } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 //test feature branch again again again again
 
@@ -17,10 +20,46 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={Homescreen} />
-        <Drawer.Screen name="Symbol Dictionary" component={SymbolDictionary} />
-        <Drawer.Screen name="Settings" component={SettingsScreen} />
-        <Drawer.Screen name="EcoCar Video" component={VideoScreen} />
+        <Drawer.Screen name="Home" component={Homescreen}options={{
+          
+          drawerIcon: () => (
+            <AntDesign
+              name="home"
+              size={20}
+              color="#eaaa00"
+            />
+          )
+        }} />
+        <Drawer.Screen name="Symbol Dictionary" component={SymbolDictionary} options={{
+          
+          drawerIcon: () => (
+            <MaterialCommunityIcons
+              name="car-brake-alert"
+              size={20}
+              color="#eaaa00"
+            />
+          )
+        }}  />
+        <Drawer.Screen name="Interactive Wheel" component={InteractiveWheel} options={{
+          
+          drawerIcon: () => (
+            <MaterialCommunityIcons
+              name="steering"
+              size={20}
+              color="#eaaa00"
+            />
+          )
+        }} />
+        <Drawer.Screen name="EcoCar Video" component={VideoScreen} options={{
+          
+          drawerIcon: () => (
+            <MaterialIcons
+              name="ondemand-video"
+              size={20}
+              color="#eaaa00"
+            />
+          )
+        }}  />
       </Drawer.Navigator>
     </NavigationContainer>
   );
