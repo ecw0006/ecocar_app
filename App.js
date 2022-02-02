@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import SettingsScreen from './components/SettingsScreen';
 import Homescreen from './components/Homescreen';
 import SymbolDictionary from './components/SymbolDictionary';
+import VideoScreen from './components/VideoScreen';
 
 //test feature branch again again again again
 
@@ -19,6 +20,7 @@ export default function App() {
         <Drawer.Screen name="Home" component={Homescreen} />
         <Drawer.Screen name="Symbol Dictionary" component={SymbolDictionary} />
         <Drawer.Screen name="Settings" component={SettingsScreen} />
+        <Drawer.Screen name="EcoCar Video" component={VideoScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
