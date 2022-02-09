@@ -6,9 +6,11 @@ import InteractiveWheel from './components/InteractiveWheel';
 import Homescreen from './components/Homescreen';
 import SymbolDictionary from './components/SymbolDictionary';
 import VideoScreen from './components/VideoScreen';
+import Quiz from './components/Quiz';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { setStatusBarHidden } from 'expo-status-bar';
 
 //test feature branch again again again again
 
@@ -59,6 +61,11 @@ export default function App() {
               color="#eaaa00"
             />
           )
+        }}  />
+        <Drawer.Screen name="Quiz" component={Quiz} options={{
+          drawerItemStyle:{
+            height: 0
+          }
         }}  />
       </Drawer.Navigator>
     </NavigationContainer>
