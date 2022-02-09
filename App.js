@@ -23,7 +23,7 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Home" component={Homescreen}options={{
-          
+          headerShown: false,
           drawerIcon: () => (
             <AntDesign
               name="home"
