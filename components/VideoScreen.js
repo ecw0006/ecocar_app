@@ -12,7 +12,7 @@ export default class VideoScreen extends Component {
        
       
 
-       <Image style= {{width: '100%', height: '100%'}} source ={require("../assets/test.png")}/>
+       <Image style= {{width: '100%', height: '100%'}} source ={require("../assets/blankBackground.png")}/>
         <View View style = {{position: 'absolute', top: '-50%', left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',}}>
 
         <Text style={{ fontWeight: 'bold', color: '#EAAA00', fontSize: 30, paddingBottom: 40 }}>
