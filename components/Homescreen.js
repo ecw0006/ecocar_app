@@ -16,11 +16,11 @@ export default class Homescreen extends Component {
           <Text style = {{color: 'white',fontSize: 40}}>Welcome!</Text>
         </View>
         <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '35%', justifyContent: 'center', alignItems: 'center', marginTop: '30%'}}>
-          <Text style = {{color: 'white',fontSize: '18%', textAlign:'center'}}>Welcome to the West Virginia University Ecocar’s Vehicle and Adaptive Cruise Control
+          <Text style = {{color: 'white',fontSize: 18, textAlign:'center',padding:5}}>Welcome to the West Virginia University Ecocar’s Vehicle and Adaptive Cruise Control
 
 educational app!
 </Text>
-<Text style = {{color: 'white',fontSize: '18%', textAlign:'center',padding: '5%'}}>
+<Text style = {{color: 'white',fontSize: 18, textAlign:'center',padding:5}}>
 
 The Ecocar Mobility Challenge is a multi-year, multi-university competition focusing on
 innovation in the automotive industry, currently focusing transforming a 2019 Chevrolet Blazer

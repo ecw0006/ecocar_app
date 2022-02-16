@@ -38,7 +38,7 @@ export default class InteractiveWheel extends Component {
       
       <View style={styles.container}>
         <ImageBackground source={require("../assets/blankBackground.png")} style= {{width: '100%', height: '110%'}}>
-        <ImageBackground style= {{width: '100%', height: '70%', justifyContent: "center", bottom: '-20%'}} source ={require("../assets/BlazerWheel.png")}>
+        <ImageBackground style= {{width: '100%', height: '60%', justifyContent: "center", bottom: '-25%'}} source ={require("../assets/BlazerWheel.png")}>
         {/* <View style={styles.container}> */}
          {/* <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}> */}
         {/* <Image style= {{width: '18%', height: '28%',top: '118%',left: '18.5%'}} source ={require("../assets/button2.png")}  /> */}
