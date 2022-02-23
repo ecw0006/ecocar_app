@@ -15,7 +15,7 @@ export default class Homescreen extends Component {
         
 
         <View View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: "65%", justifyContent: 'center', alignItems: 'center'}}>
-        <Image style={{width: 650, height: 200, }} source={require('../assets/ecocarlogo.png')}/>
+        <Image style={{width: "60%", height: "30%", }} source={require('../assets/ecocarlogo3.png')}/>
         </View>
         <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '45%', justifyContent: 'center', alignItems: 'center', marginTop: '30%'}}>
           <Text style = {{color: 'white',fontSize: 25, textAlign:'center',padding:5}}>Welcome to the West Virginia University Ecocar’s Vehicle and Adaptive Cruise Control
