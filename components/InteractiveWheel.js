@@ -8,12 +8,13 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     width: '100%', 
-    height: '110%'
+    height: '100%'
   },
   image: {
     flex: 1,
-   // resizeMode: "cover",
-    justifyContent: "center"
+  width: '100%',
+  height: '100%',
+  resizeMode: 'contain'
   },
   text: {
     color: "white",
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     
     shadowColor: '#303838',
     shadowOffset: { width: 0, height: 5 },
-    shadowRadius: 10,
+    shadowRadius: 0,
     shadowOpacity: 0.35,
   },
 });
@@ -38,12 +39,18 @@ export default class InteractiveWheel extends Component {
       
       <View style={styles.container}>
         <ImageBackground source={require("../assets/blankBackground.png")} style= {{width: '100%', height: '110%'}}>
-        <ImageBackground style= {{width: '100%', height: '60%', justifyContent: "center", bottom: '-25%'}} source ={require("../assets/BlazerWheel.png")}>
-        {/* <View style={styles.container}> */}
-         {/* <TouchableOpacity style={styles.button} onPress={()=>{alert("you clicked me")}}> */}
-        {/* <Image style= {{width: '18%', height: '28%',top: '118%',left: '18.5%'}} source ={require("../assets/button2.png")}  /> */}
-        {/* </TouchableOpacity> */}
-        {/* </View> */}
+        <ImageBackground style= {{width: '100%', height: '80%', justifyContent: "center", bottom: '-15%'}} source ={require("../assets/BlazerWheel.png")}>
+        <View style={styles.container}>
+         <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the RES button")}}>
+        <Image style= {{width: 120.56, height: 41.1,resizeMode: 'stretch',top: '841%',left: '19.8%'}} source ={require("../assets/RES2.png")}  />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the SET button")}}>
+        <Image style= {{width: 126.15, height: 82.65,resizeMode: 'stretch', top: '405%',left: '19.5%'}} source ={require("../assets/SET.png")}  />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("BEEP")}}>
+        <Image style= {{buttonRadius:0, width: 256.96, height: 270.1,resizeMode: 'stretch', top: '74.9%',left: '34.2%'}} source ={require("../assets/horn.png")}  />
+        </TouchableOpacity>
+        </View>
         </ImageBackground>
     </ImageBackground>
         
