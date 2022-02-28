@@ -5,17 +5,46 @@ import { textDecorationColor } from 'react-native/Libraries/Components/View/Reac
 import { isRequired } from 'react-native/Libraries/DeprecatedPropTypes/DeprecatedColorPropType';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    width: '100%', 
+    height: '100%'
+  },
+  image: {
+    flex: 1,
+  width: '100%',
+  height: '100%',
+  resizeMode: 'contain'
+  },
+  text: {
+    color: "white",
+    fontSize: 42,
+    fontWeight: "bold",
+    textAlign: "center",
+    backgroundColor: "#000000a0"
+  },
+  button: {
+    
+    shadowColor: '#303838',
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 0,
+    shadowOpacity: 0.35,
+  },
+});
+
 export default class Homescreen extends Component {
  
   render() {
     return (
-      <View >
+      <View>
         <ImageBackground source={require('../assets/blankBackground.png')} style ={{width: "100%", height: "120%"}}>
         
         
 
         <View View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: "65%", justifyContent: 'center', alignItems: 'center'}}>
-        <Image style={{width: "60%", height: "30%", }} source={require('../assets/ecocarlogo3.png')}/>
+        <Image style={{width: '60%', height: 160 }} source={require('../assets/EcoCarLogo_new.png')}/>
         </View>
         <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '45%', justifyContent: 'center', alignItems: 'center', marginTop: '30%'}}>
           <Text style = {{color: 'white',fontSize: 25, textAlign:'center',padding:5}}>Welcome to the West Virginia University Ecocar’s Vehicle and Adaptive Cruise Control

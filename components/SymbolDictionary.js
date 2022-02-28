@@ -9,7 +9,7 @@ export default class SymbolDictionary extends Component {
     return (
       <ScrollView>
         <View style={{ flex: 1, backgroundColor:"#002855", flexDirection:'column', alignItems: 'center', alignContent: 'center', justifyContent: 'center', paddingTop: 25, paddingHorizontal: 10}}>
-          <ImageBackground source={require('../assets/blankBackground.png')} style ={{width: "100%", height: "100%"}}>
+          {/* <ImageBackground source={require('../assets/blankBackground.png')} style ={{width: "100%", height: "100%"}}> */}
           <Image style={{width: 350, height: 200 }} source={require('../assets/ABSWarning.png')}/>
           <Text style = {{fontSize: 30, color: 'white'}}>
                   This light comes on briefly when the
@@ -330,7 +330,7 @@ export default class SymbolDictionary extends Component {
                   you are following a vehicle ahead
                   much too closely.
                 </Text>                                                              
-          </ImageBackground>
+          {/* </ImageBackground> */}
         </View>
       </ScrollView>
     )

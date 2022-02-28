@@ -25,7 +25,7 @@ export default class VideoScreen extends Component {
         <YoutubePlayer
         height = '93%'
         width = '97%'
-        videoId = {'g5d_xUb0US8'}
+        videoId = {'bwQ0ZL05T4o'}
         />
                 </View>
 
