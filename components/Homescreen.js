@@ -35,7 +35,7 @@ ACC Educational Video, or an interactive wheel to learn.
 </Text>
         </View>
         <View style={{position:'absolute', bottom:'40%',left:'4%',width: '45%',backgroundColor:'#EAAA00',borderRadius: 20}}>
-          <Button color= "#black"
+          <Button color= "black"
             title="Symbol Dictionary"
             onPress={() => this.props.navigation.navigate('Symbol Dictionary')}
           />
@@ -48,7 +48,7 @@ ACC Educational Video, or an interactive wheel to learn.
           </View>
           <View style={{position:'absolute',bottom:'35%',right:'30%',width: '40%', backgroundColor: '#EAAA00', borderRadius: 20}}>
           <Button 
-            color= "#black"
+            color= "black"
             title="Interactive Wheel"
             onPress={() => this.props.navigation.navigate('Interactive Wheel')}
           />
