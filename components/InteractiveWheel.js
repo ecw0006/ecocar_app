@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#000000a0"
   },
   button: {
-    
+    btnContainer: {alignItems: 'flex-end'},
     shadowColor: '#303838',
     shadowOffset: { width: 0, height: 5 },
     shadowRadius: 0,
@@ -38,19 +38,24 @@ export default class InteractiveWheel extends Component {
     return (
       
       <View style={styles.container}>
-        <ImageBackground source={require("../assets/blankBackground.png")} style= {{width: '100%', height: '110%'}}>
-        <ImageBackground style= {{width: '100%', height: '80%', justifyContent: "center", bottom: '-15%'}} source ={require("../assets/BlazerWheel.png")}>
+        <ImageBackground source={require("../assets/blankhomeScreenv2.png")} style= {{width: '100%', height: '100%'}}>
+        <ImageBackground style= {{width: '100%', height: '80%', justifyContent: "center", bottom: '-20%'}} source ={require("../assets/BlazerWheel.png")}>
         <View style={styles.container}>
+         <TouchableOpacity style={styles.button} onPress={()=>{alert("BEEP")}}>
+         <Image style= {{width: 256.96, height: 270.1,resizeMode: 'stretch', top: '108%',left: '34.2%'}} source ={require("../assets/horn.png")}  />
+         </TouchableOpacity>
+        </View> 
+       <View style={styles.container}>
          <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the RES button")}}>
-        <Image style= {{width: 120.56, height: 41.1,resizeMode: 'stretch',top: '841%',left: '19.8%'}} source ={require("../assets/RES2.png")}  />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the SET button")}}>
-        <Image style= {{width: 126.15, height: 82.65,resizeMode: 'stretch', top: '405%',left: '19.5%'}} source ={require("../assets/SET.png")}  />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={()=>{alert("BEEP")}}>
-        <Image style= {{buttonRadius:0, width: 256.96, height: 270.1,resizeMode: 'stretch', top: '74.9%',left: '34.2%'}} source ={require("../assets/horn.png")}  />
+        <Image style= {{width: 120.56, height: 41.1,resizeMode: 'stretch',top: '55%',left: '19.8%'}} source ={require("../assets/RES2.png")}  />
         </TouchableOpacity>
         </View>
+         <View style={styles.container}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the SET button")}}>
+        <Image style= {{width: 126.15, height: 82.65,resizeMode: 'stretch', top: '-285%',left: '19.5%'}} source ={require("../assets/SET.png")}  />
+        </TouchableOpacity>
+        </View>
+         
         </ImageBackground>
     </ImageBackground>
         
