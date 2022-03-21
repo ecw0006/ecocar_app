@@ -11,6 +11,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { setStatusBarHidden } from 'expo-status-bar';
+import AboutUs from './components/AboutUs';
 
 //test feature branch again again again again
 
@@ -67,6 +68,16 @@ export default function App() {
             height: 0
           }
         }}  />
+        <Drawer.Screen name="About Us" component={AboutUs} options={{
+          headerShown: false,
+          drawerIcon: () => (
+            <MaterialIcons
+              name="info"
+              size={20}
+              color="#eaaa00"
+            />
+          )
+        }} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
