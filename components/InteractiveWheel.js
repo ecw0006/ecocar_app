@@ -32,13 +32,11 @@ const styles = StyleSheet.create({
   },
 });
 
-// function Modals(){
-//   const [isModalVisible, setModalVisible] = useState(false);
+// const [isModalVisible, setModalVisible] = useState(false);
 
-//   const toggleModal = () => {
+// const toggleModal = () => {
 //     setModalVisible(!isModalVisible);
 //   };
-// }
 
 export default class InteractiveWheel extends Component {
   render() {
@@ -50,10 +48,10 @@ export default class InteractiveWheel extends Component {
 
         <View style={styles.container}>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the RES button")}}>
-        <Image style= {{resizeMode:'contain',position: 'absolute', width: 142, height: 142, left: 108, top: 298}} source ={require("../assets/res.png")}  />
+        <Image style= {{resizeMode:'contain',position: 'absolute', width: 142, height: 142, left: 108, top: 298}} source ={require("../assets/res1.png")}  />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the SET button")}}>
-        <Image style= {{resizeMode:'contain',position: 'absolute', width: 142, height: 142, left: 111.2, top: 365}} source ={require("../assets/set.png")}  />
+        <Image style= {{resizeMode:'contain',position: 'absolute', width: 142, height: 142, left: 111.2, top: 365}} source ={require("../assets/set1.png")}  />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the buttons button")}}>
         <Image style= {{resizeMode:'contain',position: 'absolute', width: 88, height: 88, left: 127, top: 351}} source ={require("../assets/buttons1.png")}  />

@@ -92,27 +92,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-//const AppNavigator = createDrawerNavigator({
- // Home: {
- //   screen: Homescreen
- // },
-  //Contact: {
-  //  screen: ContactScreen
-  //},
- // About: {
- //   screen: Aboutscreen
- // }
-//},{
-//        initialRouteName: "Home"
-//});
-
-//const AppContainer = createAppContainer(AppNavigator);
-
-//const styles = StyleSheet.create({
-  //container: {
-    //flex: 1,
-    //backgroundColor: '#fff',
-    //alignItems: 'center',
-    //justifyContent: 'center',
- // },
-//});
