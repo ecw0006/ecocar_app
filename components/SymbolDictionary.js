@@ -7,11 +7,11 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 export default class SymbolDictionary extends Component {
   render() {
     return (
-      <ScrollView>
+      <ScrollView contentContainerStyle={{flexGrow: 1}}>
         <View style={{ flex: 1, backgroundColor:"#002855", flexDirection:'column', alignItems: 'center', alignContent: 'center', justifyContent: 'center', paddingTop: 25, paddingHorizontal: 10}}>
           <ImageBackground source={require('../assets/blankBackground.png')} style ={{width: "100%", height: "100%"}}>
           <Image style={{width: 350, height: 200 }} source={require('../assets/ABSWarning.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white', paddingBottom: 50 }}>
                   This light comes on briefly when the
                   engine is started.
                   If the light does not come on, have it
@@ -38,21 +38,21 @@ export default class SymbolDictionary extends Component {
                   dealer for service.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/ACC.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',  paddingBottom: 50 }}>
                   This light is white when the Adaptive
                   Cruise Control (ACC, if equipped) is
                   on and ready, and turns green when
                   the ACC is set and active.
                 </Text>
           <Image style={{width: 350, height: 200 }} source={require('../assets/ACCGap.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   If equipped, this light indicates the
                   following gap setting (near, medium,
                   or far) for FCA, and, if equipped,
                   Adaptive Cruise Control (ACC).
                 </Text>  
           <Image style={{width: 350, height: 200 }} source={require('../assets/AirbagReadiness.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light shows if there is an
                   electrical problem with the airbag
                   system. The system check includes
@@ -63,7 +63,7 @@ export default class SymbolDictionary extends Component {
                   module.
                 </Text>  
           <Image style={{width: 350, height: 200 }} source={require('../assets/BrakeSystemWarning.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light should come on briefly
                   when the engine is started. If it does
                   not come on then, have it fixed so it
@@ -73,7 +73,7 @@ export default class SymbolDictionary extends Component {
                   there is a brake problem.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/ChargingSystem.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   The charging system light comes on
                   briefly when the ignition is turned
                   on, but the engine is not running, as
@@ -89,7 +89,7 @@ export default class SymbolDictionary extends Component {
                   could drain the battery.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/CheckEngine.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   If this light is on
                   while the engine is running, a
                   malfunction has been detected and
@@ -99,21 +99,21 @@ export default class SymbolDictionary extends Component {
                   Service Mode
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/CruiseControl.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   The cruise control light is white
                   when the cruise control is on and
                   ready, and turns green when the
                   cruise control is set and active.
                 </Text>  
           <Image style={{width: 350, height: 200 }} source={require('../assets/DoorAjar.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light comes on when a door is
                   open or not securely latched. Before
                   driving, check that all doors are
                   properly closed.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/DriverSeatbelt.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   When the vehicle is started, this
                   light flashes and a chime may come
                   on to remind the driver to fasten
@@ -125,7 +125,7 @@ export default class SymbolDictionary extends Component {
                   vehicle is moving.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/ElectricParkingBrake.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   The Electric Parking Brake (EPB)
                   status light comes on when the
                   parking brake is applied. If the light
@@ -134,7 +134,7 @@ export default class SymbolDictionary extends Component {
                   problem with the EPB system
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/EngineOilPressure.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light should come on briefly as
                   the engine is started. If it does not
                   come on, have the vehicle serviced
@@ -147,23 +147,23 @@ export default class SymbolDictionary extends Component {
                   your dealer.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/HighBeamOn.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light comes on when the
                   high-beam headlamps are in use.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/IntellibeamLight.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light comes on when the
                   IntelliBeam system, if equipped, is
                   enabled. 
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/LampsOnReminder.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light comes on when the
                   exterior lamps are in use.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/LaneKeepAssist.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light is green if LKA is available
                   to assist.
                   LKA may assist by gently turning
@@ -178,7 +178,7 @@ export default class SymbolDictionary extends Component {
                   marking has been crossed.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/LowFuelWarning.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light is near the fuel gauge and
                   comes on briefly when the ignition is
                   turned on as a check to show it is
@@ -189,7 +189,7 @@ export default class SymbolDictionary extends Component {
                   have the vehicle serviced.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/PassengerSeatbelt.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                    When the vehicle is started, this
                   light flashes and a chime may come
                   on to remind passengers to fasten
@@ -201,14 +201,14 @@ export default class SymbolDictionary extends Component {
                   moving.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/PedestrianAhead.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   If equipped, this indicator will
                   display amber when a nearby
                   pedestrian is detected directly in
                   front of the vehicle.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/Security.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   The security light should come on
                   briefly as the engine is started. If it
                   does not come on, have the vehicle
@@ -221,7 +221,7 @@ export default class SymbolDictionary extends Component {
                   system.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/ServiceElectricParkingBrake.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   On some vehicles the service
                   electric parking brake light should
                   come on briefly when the vehicle is
@@ -236,7 +236,7 @@ export default class SymbolDictionary extends Component {
                   as possible.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/StabiliTrak.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light comes on briefly when the
                   engine is started.
                   If the light does not come on, have
@@ -257,7 +257,7 @@ export default class SymbolDictionary extends Component {
                   system is actively working.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/StabiliTrakOff.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light comes on briefly while
                   starting the engine. If it does not,
                   have the vehicle serviced by your
@@ -275,7 +275,7 @@ export default class SymbolDictionary extends Component {
                   turns off.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/TirePressure.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   For vehicles with the Tire Pressure
                   Monitor System (TPMS), this light
                   comes on briefly when the engine is
@@ -294,14 +294,14 @@ export default class SymbolDictionary extends Component {
                   will come on at every ignition cycle.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/TowMode.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   For vehicles with the Tow/Haul
                   Mode feature, this light comes on
                   when the Tow/Haul Mode has been
                   activated.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/TractionOff.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   This light comes on briefly while
                   starting the engine. If it does not,
                   have the vehicle serviced by your
@@ -323,7 +323,7 @@ export default class SymbolDictionary extends Component {
                   Adjust driving accordingly.
                 </Text> 
           <Image style={{width: 350, height: 200 }} source={require('../assets/VehicleAheadIndicator.png')}/>
-          <Text style = {{fontSize: 30, color: 'white'}}>
+          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
                   If equipped, this indicator will
                   display green when a vehicle is
                   detected ahead and amber when
