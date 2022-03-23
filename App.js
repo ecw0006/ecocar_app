@@ -34,7 +34,7 @@ export default function App() {
           )
         }} />
         <Drawer.Screen name="Symbol Dictionary" component={SymbolDictionary} options={{
-          
+          headerShown: false,
           drawerIcon: () => (
             <MaterialCommunityIcons
               name="car-brake-alert"
@@ -44,7 +44,7 @@ export default function App() {
           )
         }}  />
         <Drawer.Screen name="Interactive Wheel" component={InteractiveWheel} options={{
-          
+          headerShown: false,
           drawerIcon: () => (
             <MaterialCommunityIcons
               name="steering"
@@ -54,7 +54,7 @@ export default function App() {
           )
         }} />
         <Drawer.Screen name="EcoCar Video" component={VideoScreen} options={{
-          
+          headerShown: false,
           drawerIcon: () => (
             <MaterialIcons
               name="ondemand-video"

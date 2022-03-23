@@ -8,29 +8,38 @@ export default class VideoScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        
+       
+      
 
-       <Image style= {{width: '100%', height: '100%'}} source ={require("../assets/test.png")}/>
-        <View View style = {{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',}}>
+       <Image style= {{width: '100%', height: '100%'}} source ={require("../assets/blankBackground.png")}/>
+        <View View style = {{position: 'absolute', top: '-50%', left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',}}>
 
-        <Text style={{ fontWeight: 'bold', color: '#EAAA00', fontSize: 30, paddingBottom: 40 }}>
+        <Text style={{ fontWeight: 'bold', color: '#EAAA00', fontSize: 45, paddingBottom: 40 }}>
          Safety Module Video
         </Text>
         
+        </View>
+        <View style ={{position: 'absolute', top: '30%', left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center', backgroundColor: '#EAAA00', height: '40%', width: "100%",}}>
+
         <YoutubePlayer
-        height = '50%'
-        width = '100%'
-        videoId = {'laW8rtUEMyc'}
+        height = '93%'
+        width = '97%'
+        videoId = {'bwQ0ZL05T4o'}
         />
+                </View>
+
         
 
-        </View>
-        <View style ={{position: 'absolute', top: '30%', left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',}}>
+        
+        <View style ={{position: 'absolute', top: '75%', left: '37.5%', right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center', backgroundColor: '#EAAA00', height: '5%', width: "25%", borderRadius: "40"}}>
         
         <Button 
         title="Take Quiz"
-        color= '#EAAA00'
+        color= 'black'
         onPress={() => this.props.navigation.navigate('Quiz')}
          />
+         
         </View>
       </View>
       
