@@ -13,7 +13,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { setStatusBarHidden } from 'expo-status-bar';
 import AboutUs from './components/AboutUs';
 
-//test feature branch again again again again
+//test feature branch again again again again again again again again
 
 
 
@@ -24,7 +24,9 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Home" component={Homescreen}options={{
-          headerShown: false,
+           headerShown: true,
+           headerTransparent: true,
+           headerTitle: " ",
           drawerIcon: () => (
             <AntDesign
               name="home"
@@ -34,7 +36,9 @@ export default function App() {
           )
         }} />
         <Drawer.Screen name="Symbol Dictionary" component={SymbolDictionary} options={{
-          headerShown: false,
+           headerShown: true,
+           headerTransparent: true,
+           headerTitle: " ",
           drawerIcon: () => (
             <MaterialCommunityIcons
               name="car-brake-alert"
@@ -44,7 +48,9 @@ export default function App() {
           )
         }}  />
         <Drawer.Screen name="Interactive Wheel" component={InteractiveWheel} options={{
-          headerShown: false,
+           headerShown: true,
+           headerTransparent: true,
+           headerTitle: " ",
           drawerIcon: () => (
             <MaterialCommunityIcons
               name="steering"
@@ -54,7 +60,9 @@ export default function App() {
           )
         }} />
         <Drawer.Screen name="EcoCar Video" component={VideoScreen} options={{
-          headerShown: false,
+           headerShown: true,
+           headerTransparent: true,
+           headerTitle: " ",
           drawerIcon: () => (
             <MaterialIcons
               name="ondemand-video"
@@ -69,7 +77,9 @@ export default function App() {
           }
         }}  />
         <Drawer.Screen name="About Us" component={AboutUs} options={{
-          headerShown: false,
+           headerShown: true,
+           headerTransparent: true,
+           headerTitle: " ",
           drawerIcon: () => (
             <MaterialIcons
               name="info"
