@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import { Button, View, Text, Image, ImageBackground } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { StyleSheet, StyleSheetProperties, TouchableOpacity } from 'react-native';
+import Modal from 'react-native-modal';
+import { useState } from 'react/cjs/react.development';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -24,14 +27,18 @@ const styles = StyleSheet.create({
     backgroundColor: "#000000a0"
   },
   button: {
-    btnContainer: {alignItems: 'flex-end'},
-    shadowColor: '#303838',
-    shadowOffset: { width: 0, height: 5 },
-    shadowRadius: 0,
-    shadowOpacity: 0.35,
+    
+    
   },
 });
 
+// function Modals(){
+//   const [isModalVisible, setModalVisible] = useState(false);
+
+//   const toggleModal = () => {
+//     setModalVisible(!isModalVisible);
+//   };
+// }
 
 export default class InteractiveWheel extends Component {
   render() {
@@ -39,22 +46,21 @@ export default class InteractiveWheel extends Component {
       
       <View style={styles.container}>
         <ImageBackground source={require("../assets/blankhomeScreenv2.png")} style= {{width: '100%', height: '100%'}}>
-        <ImageBackground style= {{width: '100%', height: '80%', justifyContent: "center", bottom: '-20%'}} source ={require("../assets/BlazerWheel.png")}>
+        <ImageBackground style= {{width: 800, height: 800, justifyContent: "center", bottom: '-15%'}} source ={require("../assets/Wheel_final.png")}>
+
         <View style={styles.container}>
-         <TouchableOpacity style={styles.button} onPress={()=>{alert("BEEP")}}>
-         <Image style= {{width: 256.96, height: 270.1,resizeMode: 'stretch', top: '108%',left: '34.2%'}} source ={require("../assets/horn.png")}  />
-         </TouchableOpacity>
-        </View> 
-       <View style={styles.container}>
-         <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the RES button")}}>
-        <Image style= {{width: 120.56, height: 41.1,resizeMode: 'stretch',top: '55%',left: '19.8%'}} source ={require("../assets/RES2.png")}  />
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the RES button")}}>
+        <Image style= {{resizeMode:'contain',position: 'absolute', width: 142, height: 142, left: 108, top: 298}} source ={require("../assets/res.png")}  />
         </TouchableOpacity>
-        </View>
-         <View style={styles.container}>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the SET button")}}>
-        <Image style= {{width: 126.15, height: 82.65,resizeMode: 'stretch', top: '-285%',left: '19.5%'}} source ={require("../assets/SET.png")}  />
+        <Image style= {{resizeMode:'contain',position: 'absolute', width: 142, height: 142, left: 111.2, top: 365}} source ={require("../assets/set.png")}  />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the buttons button")}}>
+        <Image style= {{resizeMode:'contain',position: 'absolute', width: 88, height: 88, left: 127, top: 351}} source ={require("../assets/buttons1.png")}  />
         </TouchableOpacity>
         </View>
+       
+       
          
         </ImageBackground>
     </ImageBackground>
