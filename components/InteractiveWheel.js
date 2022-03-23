@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { Button, View, Text, Image, ImageBackground } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { StyleSheet, StyleSheetProperties, TouchableOpacity } from 'react-native';
-import Modal from 'react-native-modal';
-import { useState } from 'react/cjs/react.development';
+//import Modal from 'react-native-modal';
+//import { useState } from 'react/cjs/react.development';cd Des
 
 const styles = StyleSheet.create({
   container: {
