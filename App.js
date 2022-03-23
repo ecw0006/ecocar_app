@@ -12,6 +12,11 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { setStatusBarHidden } from 'expo-status-bar';
 import AboutUs from './components/AboutUs';
+import AboutCar from './components/AboutCar';
+import AboutComp from './components/AboutComp';
+import AboutTeam from './components/AboutTeam';
+
+
 
 //test feature branch again again again again again again again again
 
@@ -80,6 +85,36 @@ export default function App() {
            headerShown: true,
            headerTransparent: true,
            headerTitle: " ",
+          drawerIcon: () => (
+            <MaterialIcons
+              name="info"
+              size={20}
+              color="#eaaa00"
+            />
+          )
+        }} />
+        <Drawer.Screen name="About the Car" component={AboutCar} options={{
+          headerShown: false,
+          drawerIcon: () => (
+            <MaterialIcons
+              name="info"
+              size={20}
+              color="#eaaa00"
+            />
+          )
+        }} />
+        <Drawer.Screen name="About our Team" component={AboutTeam} options={{
+          headerShown: false,
+          drawerIcon: () => (
+            <MaterialIcons
+              name="info"
+              size={20}
+              color="#eaaa00"
+            />
+          )
+        }} />
+         <Drawer.Screen name="About the Competition" component={AboutComp} options={{
+          headerShown: false,
           drawerIcon: () => (
             <MaterialIcons
               name="info"

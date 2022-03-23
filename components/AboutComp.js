@@ -13,29 +13,19 @@ export default class AboutUs extends Component {
         <Image style= {{width: '100%', height: '110%'}} source ={require("../assets/blankBackground.png")}  />
         
         <View View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: "70%", justifyContent: 'center', alignItems: 'center'}}>
-          <Text style = {{color: 'white',fontSize: 40}}>About Us!</Text>
+          <Text style = {{color: 'white',fontSize: 40}}>About the Competition!</Text>
         </View>
         <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '35%', justifyContent: 'center', alignItems: 'center'}}>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'justify'}}>The EcoCar Mobility Challenge is a 4 year compitition between 11 universities. The goal of EcoCar is to transform a 2019 Chevrolet Blazer into a hybrid vehicle featuring autonomous vehicle capabilities including Adaptive Cruise Control</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'justify'}}>Enter competition info</Text>
         </View>
         <View style={{position:'absolute', bottom:'20%',left:'4%',width: '45%'}}>
           <Button color= "#EAAA00"
-            title="About the Car"
-           onPress={() => this.props.navigation.navigate('About the Car')}
+            title="Back"
+            onPress={() => this.props.navigation.navigate('About Us')}
           />
           </View>
-          <View style={{position:'absolute',bottom:'20%',right:'5%',width: '45%'}}>
-          <Button color= "#EAAA00"
-            title="About our Team"
-            onPress={() => this.props.navigation.navigate('About our Team')}
-          />
-          </View>
-          <View style={{position:'absolute', bottom:'15%',left:'25%',width: '45%'}}>
-          <Button color= "#EAAA00"
-            title="About the Competition"
-           onPress={() => this.props.navigation.navigate('About the Competition')}
-          />
-          </View>
+          
+          
           
           
        </View>
