@@ -47,8 +47,8 @@ export default class Homescreen extends Component {
         <Image style={{width: 440, height: 135, resizeMode: 'stretch'}} source={require('../assets/EcoCarLogo_new.png')}/>
         </View>
 
-        <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '35%', justifyContent: 'center', alignItems: 'center'}}>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'justify'}}>Welcome to the WVU EcoCar Mobility Challenge Educational App. Here you can learn about our vehicle's Adaptive Cruise Control through our video and quiz as well as general information about our vehicle and its symbol dictionary.</Text>
+        <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '30%', justifyContent: 'center', alignItems: 'center'}}>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'center'}}>Welcome to the WVU EcoCar Mobility Challenge Educational App. Here you can learn about our vehicle's Adaptive Cruise Control through our video and quiz as well as general information about our vehicle and its symbol dictionary.</Text>
 
         </View>
         <View style={{position:'absolute', bottom:'10%',left:'3%',width: '45%',backgroundColor:'#EAAA00',borderRadius: 20}}>
