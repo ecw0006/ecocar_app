@@ -53,7 +53,7 @@ export default class InteractiveWheel extends Component {
         <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the SET button")}}>
         <Image style= {{resizeMode:'contain',position: 'absolute', width: 142, height: 142, left: 111.2, top: 365}} source ={require("../assets/set1.png")}  />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the buttons button")}}>
+        <TouchableOpacity style={styles.button} onPress={()=>{alert("Use this button to turn on and off crusie control")}}>
         <Image style= {{resizeMode:'contain',position: 'absolute', width: 88, height: 88, left: 127, top: 351}} source ={require("../assets/buttons1.png")}  />
         </TouchableOpacity>
         </View>
