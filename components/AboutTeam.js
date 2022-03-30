@@ -16,7 +16,18 @@ export default class AboutUs extends Component {
           <Text style = {{color: 'white',fontSize: 40}}>About Our Team!</Text>
         </View>
         <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '35%', justifyContent: 'center', alignItems: 'center'}}>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'justify'}}>Enter team info</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Project Manager: Clay Vincent</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Instructors: Dr. Brian Woerner and Dr. Andrew Nix</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Swimlane leaders: </Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>HMI Team Members </Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>App Development: Emily Waechter, Ty Biela, Kyle Breedlove, Dakota Lacy</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Video:</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Animation:</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Testing:</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Presentation:</Text>
+
+
+
         </View>
         <View style={{position:'absolute', bottom:'20%',left:'4%',width: '45%'}}>
           <Button color= "#EAAA00"
