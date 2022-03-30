@@ -16,7 +16,7 @@ export default class AboutUs extends Component {
           <Text style = {{color: 'white',fontSize: 40}}>About Us!</Text>
         </View>
         <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '35%', justifyContent: 'center', alignItems: 'center'}}>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'justify'}}>The EcoCar Mobility Challenge is a 4 year compitition between 11 universities. The goal of EcoCar is to transform a 2019 Chevrolet Blazer into a hybrid vehicle featuring autonomous vehicle capabilities including Adaptive Cruise Control</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'justify'}}>The EcoCar Mobility Challenge is a 4 year compitition between universities accross the country. The goal of EcoCar is to transform a 2019 Chevrolet Blazer into a hybrid vehicle featuring autonomous vehicle capabilities including Adaptive Cruise Control.</Text>
         </View>
         <View style={{position:'absolute', bottom:'20%',left:'4%',width: '45%'}}>
           <Button color= "#EAAA00"
@@ -30,12 +30,12 @@ export default class AboutUs extends Component {
             onPress={() => this.props.navigation.navigate('About our Team')}
           />
           </View>
-          <View style={{position:'absolute', bottom:'15%',left:'25%',width: '45%'}}>
+         {/* <View style={{position:'absolute', bottom:'15%',left:'25%',width: '45%'}}>
           <Button color= "#EAAA00"
             title="About the Competition"
            onPress={() => this.props.navigation.navigate('About the Competition')}
           />
-          </View>
+          </View>*/}
           
           
        </View>

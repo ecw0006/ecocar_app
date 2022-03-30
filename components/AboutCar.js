@@ -16,7 +16,8 @@ export default class AboutUs extends Component {
           <Text style = {{color: 'white',fontSize: 40}}>About Our Car!</Text>
         </View>
         <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '35%', justifyContent: 'center', alignItems: 'center'}}>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'justify'}}>Enter Car info</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>We modified a 2019 Chevrolet Blazer into a hybrid vehicle featuring our own Adaptive Cruise Control system.</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Gather car specs to input:</Text>
         </View>
         <View style={{position:'absolute', bottom:'20%',left:'4%',width: '45%'}}>
           <Button color= "#EAAA00"
