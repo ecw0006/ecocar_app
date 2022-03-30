@@ -10,21 +10,21 @@ export default class AboutUs extends Component {
   render() {
     return (
       <View >
-        <Image style= {{width: '100%', height: '110%'}} source ={require("../assets/blankBackground.png")}  />
+        <Image style= {{width: '100%', height: '110%'}} source ={require("../assets/blankhomeScreenv2.png")}  />
         
-        <View View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: "70%", justifyContent: 'center', alignItems: 'center'}}>
+        <View View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: "60%", justifyContent: 'center', alignItems: 'center'}}>
           <Text style = {{color: 'white',fontSize: 40}}>About Our Team!</Text>
         </View>
-        <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '35%', justifyContent: 'center', alignItems: 'center'}}>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Project Manager: Clay Vincent</Text>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Instructors: Dr. Brian Woerner and Dr. Andrew Nix</Text>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Swimlane leaders: </Text>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>HMI Team Members </Text>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>App Development: Emily Waechter, Ty Biela, Kyle Breedlove, Dakota Lacy</Text>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Video:</Text>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Animation:</Text>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Testing:</Text>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Presentation:</Text>
+        <View View style={{position: 'absolute', top: 0, left: '25%', right: '15%', bottom: '10%', justifyContent: 'center', alignItems: 'left'}}>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 50}}>Project Manager: Clay Vincent</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 50}}>Instructors: Dr. Brian Woerner and Dr. Andrew Nix</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 50}}>Swimlane leaders: </Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 50}}>HMI Team Members: </Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 50}}>App Development: Emily Waechter, Ty Biela, Kyle Breedlove, Dakota Lacy</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 50}}>Video:</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 50}}>Animation:</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 50}}>Testing:</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 50}}>Presentation:</Text>
 
 
 
