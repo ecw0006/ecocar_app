@@ -14,8 +14,8 @@ export default class Quiz extends Component {
 
           <View style={{width: '95%', paddingTop:50, paddingBottom:50,}}>
             <Text style = {{color: '#FFFFFF',fontSize: 25, textAlign:'center',paddingBottom: 10}}>What is ACC?</Text>
-            <View style= {{marginLeft: '35%'}}>
-              <View style= {{paddingBottom: 5}}>
+            <View style= {{marginLeft: '20%'}}>
+              <View style= {{paddingBottom: 5,}}>
               <BouncyCheckbox
                 size={25}
                 fillColor="#FFFFFF"
@@ -76,7 +76,7 @@ export default class Quiz extends Component {
           <View style={{width: '95%', paddingTop:50, paddingBottom:50,}}>
           <Text style = {{color: '#FFFFFF',fontSize: 25, textAlign:'center',paddingBottom: 10}}>How do you turn on Cruise Control?</Text>
     
-            <View style= {{marginLeft: '35%',}}> 
+            <View style= {{marginLeft: '20%',}}> 
           <View style= {{paddingBottom: 5}}>
           <BouncyCheckbox
     size={25}
@@ -139,7 +139,7 @@ export default class Quiz extends Component {
           <View style={{width: '95%', paddingTop:50, paddingBottom:50,}}>
           <Text style = {{color: '#FFFFFF',fontSize: 25, textAlign:'center',paddingBottom: 10}}>In what situations should ACC be used?</Text>
           
-          <View style= {{marginLeft: '35%',}}> 
+          <View style= {{marginLeft: '20%',}}> 
           
   <View style= {{paddingBottom: 5}}>
   <BouncyCheckbox
@@ -204,7 +204,7 @@ export default class Quiz extends Component {
           <View style={{width: '95%', paddingTop:50, paddingBottom:50,}}>
           <Text style = {{color: '#FFFFFF',fontSize: 25, textAlign:'center',paddingBottom: 10}}>Why is ACC useful?</Text>
           
-          <View style= {{marginLeft: '35%',}}> 
+          <View style= {{marginLeft: '20%',}}> 
          
   <View style= {{paddingBottom: 5}}>
   <BouncyCheckbox
@@ -270,7 +270,7 @@ export default class Quiz extends Component {
           <View style={{width: '95%', paddingTop:50, paddingBottom:50,}}>
           <Text style = {{color: '#FFFFFF',fontSize: 25, textAlign:'center',paddingBottom: 10}}>Pressing down on the break will deactivate ACC.</Text>
           
-          <View style= {{marginLeft: '35%',}}> 
+          <View style= {{marginLeft: '20%',}}> 
           <View style= {{paddingBottom: 5}}>
           <BouncyCheckbox
     size={25}
