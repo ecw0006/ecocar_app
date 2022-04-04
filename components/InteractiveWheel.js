@@ -45,7 +45,7 @@ export default class InteractiveWheel extends Component {
       <View style={styles.container}>
         <ImageBackground source={require("../assets/blankhomeScreenv2.png")} style= {{width: '100%', height: '100%'}}>
         <ImageBackground style= {{width: 800, height: 800, justifyContent: "center", bottom: '-15%'}} source ={require("../assets/Wheel_final.png")}>
-
+        
         <View style={styles.container}>
         <TouchableOpacity style={styles.button} onPress={()=>{alert("This is the RES button")}}>
         <Image style= {{resizeMode:'contain',position: 'absolute', width: 142, height: 142, left: 108, top: 298}} source ={require("../assets/res1.png")}  />

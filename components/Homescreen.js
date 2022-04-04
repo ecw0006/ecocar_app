@@ -41,7 +41,7 @@ export default class Homescreen extends Component {
       <View>
         <ImageBackground source={require('../assets/homeScreenv2.png')} style ={{width: "100%", height: "100%"}}>
         
-        
+
 
         <View View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: "57%", justifyContent: 'center', alignItems: 'center'}}>
         <Image style={{width: 440, height: 135, resizeMode: 'stretch'}} source={require('../assets/EcoCarLogo_new.png')}/>
