@@ -7,9 +7,11 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 export default class SymbolDictionary extends Component {
   render() {
     return (
+      
       <ScrollView contentContainerStyle={{flexGrow: 1}}>
         <View style={{ flex: 1, backgroundColor:"#002855", flexDirection:'column', alignItems: 'center', alignContent: 'center', justifyContent: 'center', paddingTop: 25, paddingHorizontal: 10}}>
           {/* <ImageBackground source={require('../assets/blankBackground.png')} style ={{width: "100%", height: "100%"}}> */}
+          
           <Image style={{width: 350, height: 200 }} source={require('../assets/ABSWarning.png')}/>
           <Text style = {{fontSize: 30, color: 'white', paddingBottom: 50 }}>
                   This light comes on briefly when the
