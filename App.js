@@ -166,9 +166,9 @@ export default function App() {
            headerShown: true,
            headerLeft: () => (
             <View style={{ flex: 1, left:20 }}>
-            <TouchableOpacity  onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
-             <MaterialCommunityIcons
-              name="microsoft-xbox-controller-menu"
+            <TouchableOpacity onPress={() => navigation.navigate('EcoCar Video')}>
+            <AntDesign
+              name="back"
               size={50}
               color="#eaaa00"
             />
@@ -177,7 +177,7 @@ export default function App() {
                  </TouchableOpacity>
 
             <Text style={{ color: '#eaaa00' }}>    
-                   {""}  Menu
+                   {""}  Back
                </Text>
                  </View>
           ),
