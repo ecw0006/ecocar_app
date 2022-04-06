@@ -75,13 +75,13 @@ export default function App() {
              <MaterialCommunityIcons
               name="microsoft-xbox-controller-menu"
               size={50}
-              color="#eaaa00"
+              color="#002855"
             />
       
                 
                  </TouchableOpacity>
 
-            <Text style={{ color: '#eaaa00' }}>    
+            <Text style={{ color: '#002855' }}>    
                    {""}  Menu
                </Text>
                  </View>

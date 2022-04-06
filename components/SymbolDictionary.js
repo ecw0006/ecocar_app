@@ -7,10 +7,12 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 export default class SymbolDictionary extends Component {
   render() {
     return (
-      
+      <View>
+      <ImageBackground source={require('../assets/blankhomeScreenv2.png')} style ={{width: "100%", height: "100%"}}>
+       <View style={{height: 830, top: 200}}>
       <ScrollView contentContainerStyle={{flexGrow: 1}}>
-        <View style={{ flex: 1, backgroundColor:"#002855", flexDirection:'column', alignItems: 'center', alignContent: 'center', justifyContent: 'center', paddingTop: 25, paddingHorizontal: 10}}>
-          {/* <ImageBackground source={require('../assets/blankBackground.png')} style ={{width: "100%", height: "100%"}}> */}
+        <View style={{ flex: 1, backgroundColor:'#00000000', flexDirection:'column', alignItems: 'center', alignContent: 'center', justifyContent: 'center', paddingTop: 50, paddingHorizontal: 10}}>
+         
           
           <Image style={{width: 350, height: 200 }} source={require('../assets/ABSWarning.png')}/>
           <Text style = {{fontSize: 30, color: 'white', paddingBottom: 50 }}>
@@ -332,9 +334,12 @@ export default class SymbolDictionary extends Component {
                   you are following a vehicle ahead
                   much too closely.
                 </Text>                                                              
-          {/* </ImageBackground> */}
+          
         </View>
       </ScrollView>
+      </View>
+      </ImageBackground>
+      </View>
     )
   }
 }
