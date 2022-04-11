@@ -7,9 +7,12 @@ import BouncyCheckbox from "react-native-bouncy-checkbox";
 export default class Quiz extends Component {
   render() {
     return (
-      <ScrollView>
+      <View>
+      <ImageBackground source={require('../assets/blankhomeScreenv2.png')} style ={{width: "100%", height: "100%"}}>
+       <View style={{height: 838, top: 200}}>
+      <ScrollView contentContainerStyle={{flexGrow: 1}}>
         
-        <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: "#002855"}}>
+        <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#00000000'}}>
         
 
           <View style={{width: '95%', paddingTop:50, paddingBottom:50,}}>
@@ -339,6 +342,9 @@ export default class Quiz extends Component {
         </View> */}
 
       </ScrollView>
+      </View>
+      </ImageBackground>
+      </View>
 
 
     )

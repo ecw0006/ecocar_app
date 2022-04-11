@@ -53,6 +53,7 @@ export default function App() {
                  </View>
           ),
           
+          
             headerStatusBarHeight: 40,
            headerTransparent: true,
            headerTitle: " ",
@@ -83,6 +84,23 @@ export default function App() {
 
             <Text style={{ color: '#002855' }}>    
                    {""}  Menu
+               </Text>
+                 </View>
+          ),
+          headerRight: () => (
+            <View style={{ flex: 1, right: 25 }}>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            <AntDesign
+              name="home"
+              size={50}
+              color="#eaaa00"
+            />
+      
+                
+                 </TouchableOpacity>
+
+            <Text style={{ color: '#eaaa00' }}>    
+                   {""}  Home
                </Text>
                  </View>
           ),
@@ -118,6 +136,23 @@ export default function App() {
                </Text>
                  </View>
           ),
+          headerRight: () => (
+            <View style={{ flex: 1, right: 25 }}>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            <AntDesign
+              name="home"
+              size={50}
+              color="#eaaa00"
+            />
+      
+                
+                 </TouchableOpacity>
+
+            <Text style={{ color: '#eaaa00' }}>    
+                   {""}  Home
+               </Text>
+                 </View>
+          ),
           
             headerStatusBarHeight: 40,
            headerTransparent: true,
@@ -150,6 +185,23 @@ export default function App() {
                </Text>
                  </View>
           ),
+          headerRight: () => (
+            <View style={{ flex: 1, right: 25 }}>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            <AntDesign
+              name="home"
+              size={50}
+              color="#eaaa00"
+            />
+      
+                
+                 </TouchableOpacity>
+
+            <Text style={{ color: '#eaaa00' }}>    
+                   {""}  Home
+               </Text>
+                 </View>
+          ),
           
             headerStatusBarHeight: 40,
            headerTransparent: true,
@@ -170,13 +222,13 @@ export default function App() {
             <AntDesign
               name="back"
               size={50}
-              color="#eaaa00"
+              color="#002855"
             />
       
                 
                  </TouchableOpacity>
 
-            <Text style={{ color: '#eaaa00' }}>    
+            <Text style={{ color: '#002855' }}>    
                    {""}  Back
                </Text>
                  </View>
@@ -208,10 +260,27 @@ export default function App() {
                </Text>
                  </View>
           ),
+          headerRight: () => (
+            <View style={{ flex: 1, right: 25 }}>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            <AntDesign
+              name="home"
+              size={50}
+              color="#eaaa00"
+            />
+      
+                
+                 </TouchableOpacity>
+
+            <Text style={{ color: '#eaaa00' }}>    
+                   {""}  Home
+               </Text>
+                 </View>
+          ),
           
             headerStatusBarHeight: 40,
            headerTransparent: true,
-          
+           headerTitle: " ",
           drawerIcon: () => (
             <MaterialIcons
               name="info"
@@ -243,7 +312,7 @@ export default function App() {
           
             headerStatusBarHeight: 40,
            headerTransparent: true,
-          
+           headerTitle: " ",
           drawerItemStyle:{
             height: 0
           }
@@ -271,7 +340,7 @@ export default function App() {
           
             headerStatusBarHeight: 40,
            headerTransparent: true,
-          
+           headerTitle: " ",
           drawerItemStyle:{
             height: 0
           }
@@ -298,6 +367,7 @@ export default function App() {
           
             headerStatusBarHeight: 40,
            headerTransparent: true,
+           headerTitle: " ",
           drawerItemStyle:{
             height: 0
           }
