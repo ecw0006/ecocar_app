@@ -9,7 +9,7 @@ export default class SymbolDictionary extends Component {
     return (
       <View>
       <ImageBackground source={require('../assets/blankhomeScreenv2.png')} style ={{width: "100%", height: "100%"}}>
-       <View style={{height: 830, top: 200}}>
+       <View style={{height: 838, top: 200}}>
       <ScrollView contentContainerStyle={{flexGrow: 1}}>
         <View style={{ flex: 1, backgroundColor:'#00000000', flexDirection:'column', alignItems: 'center', alignContent: 'center', justifyContent: 'center', paddingTop: 50, paddingHorizontal: 10}}>
          
