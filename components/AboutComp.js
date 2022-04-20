@@ -16,14 +16,9 @@ export default class AboutUs extends Component {
           <Text style = {{color: 'white',fontSize: 40}}>About the Competition!</Text>
         </View>
         <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '35%', justifyContent: 'center', alignItems: 'center'}}>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'justify'}}>Enter competition info</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'justify'}}>This page is still under development</Text>
         </View>
-        <View style={{position:'absolute', bottom:'20%',left:'4%',width: '45%'}}>
-          <Button color= "#EAAA00"
-            title="Back"
-            onPress={() => this.props.navigation.navigate('About Us')}
-          />
-          </View>
+       
           
           
           

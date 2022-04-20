@@ -15,16 +15,15 @@ export default class AboutUs extends Component {
         <View View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: "60%", justifyContent: 'center', alignItems: 'center'}}>
           <Text style = {{color: 'white',fontSize: 40}}>About Our Car!</Text>
         </View>
-        <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '35%', justifyContent: 'center', alignItems: 'center'}}>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>We modified a 2019 Chevrolet Blazer into a hybrid vehicle featuring our own Adaptive Cruise Control system.</Text>
-          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>Gather car specs to input:</Text>
+        <View View style={{position: 'absolute', top: 0, left: '15%', right: '15%', bottom: '10%', justifyContent: 'center', alignItems: 'left'}}>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>We modified a 2019 Chevrolet Blazer into a hybrid vehicle featuring our own Adaptive Cruise Control system.{('\n')}</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>To transform our vehicle into a hybrid vehicle we added an HEV 4 battery pack with a Manga eAWD motor paired with an inverter to become a P4 hybrid vehicle meaning it has 4 wheel drive capabilities using the combustion engine for the front axle and the electric motor powering the rear.{('\n')}</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>We also replaced the stock engine with a smaller, 2.5 liter engine and added coolant lines to manage the temperature of our added components.{('\n')}</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>We were tasked with making the vehicle Level 2 SAE autonomous, meaning the vehicle can control both steering and accelerating/decelerating. To do this, we added a front radar (MRR) from Bosch and an Intel Mobileye Camera 630.{('\n')}</Text>
+          <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>To complete these tasks, we added a MicroAutobox from DSAPCE along with an Intel IoT Tank for our main processing units.</Text>
+
         </View>
-        <View style={{position:'absolute', bottom:'20%',left:'4%',width: '45%'}}>
-          <Button color= "#EAAA00"
-            title="Back"
-            onPress={() => this.props.navigation.navigate('About Us')}
-          />
-          </View>
+       
           
           
           

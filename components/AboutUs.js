@@ -31,7 +31,7 @@ export default class AboutUs extends Component {
           />
           </View>
          <View style={{position:'absolute', bottom:'15%',left:'25%',width: '50%',backgroundColor: '#EAAA00', borderRadius: 20}}>
-          <Button color= "#black"
+          <Button color= "black"
             title="About the Competition"
            onPress={() => this.props.navigation.navigate('About the Competition')}
           />
