@@ -15,7 +15,7 @@ export default class AboutUs extends Component {
         <View View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: "60%", justifyContent: 'center', alignItems: 'center'}}>
           <Text style = {{color: 'white',fontSize: 40}}>About Our Team!</Text>
         </View>
-        <View View style={{position: 'absolute', top: 0, left: '10%', right: '0%', bottom: '0%', justifyContent:'center', alignItems: 'left'}}>
+        <View View style={{position: 'absolute', top: 150, left: '10%', right: '0%', bottom: '0%', justifyContent:'center', alignItems: 'left'}}>
           <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 30}}><Text style={{fontWeight:"bold"}}>Project Manager:</Text> Clay Vincent{('\n')}</Text>
           <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 30}}><Text style={{fontWeight:"bold"}}>Communication Manager:</Text> Kaycee Kiser{('\n')} </Text>
           <Text style = {{color: 'white',fontSize: 20, textAlign:'left',lineHeight: 30}}><Text style={{fontWeight:"bold"}}>Engineering Manager</Text> Colin Kellett{('\n')} </Text>
