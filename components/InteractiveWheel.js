@@ -5,7 +5,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { StyleSheet, StyleSheetProperties, TouchableOpacity } from 'react-native';
 import Modal from "react-native-modal";
 import { useState } from 'react/cjs/react.development';
-
+import { MaterialIcons } from '@expo/vector-icons';
 
 
 const styles = StyleSheet.create({
@@ -70,20 +70,63 @@ export default class InteractiveWheel extends Component {
       modal05: false,
       modal06: false,
       modal07: false,
-      modal08: false
+      modal08: false,
+      modal10: true
     };
   }
   
   render() {
   
-    
     return (
       
       <View style={styles.container}>
         <ImageBackground source={require("../assets/blankhomeScreenv2.png")} style= {{width: '100%', height: '100%'}}>
-        <ImageBackground style= {{width: 800, height: 800, justifyContent: "center", bottom: '-15%'}} source ={require("../assets/Wheel_final.png")}>
         
+        <ImageBackground style= {{width: 800, height: 800, justifyContent: "center", top: 200, left: 5}} source ={require("../assets/Wheel_final.png")}>
+         
         <View style={styles.container}>
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal10}
+          style={{
+            flex: 1,
+            margin: 0,
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => {
+            this.setState({ modal10: false });
+          }}
+        >
+          <View
+            style={{
+              height: 300,
+              width: 300,
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "#C6C5B9"
+            }}
+          >
+             <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+             Welcome to the interactive wheel for your Chevy Blazer! Press any button on the wheel to learn what it does.
+            </Text>
+            <TouchableOpacity
+              style={{
+                height: 30,
+                width: 180,
+                backgroundColor: "#62929E",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+              onPress={() => this.setState({ modal10: false })}
+            >
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+
 
         <Modal
           transparent={true}
@@ -515,6 +558,18 @@ thumbwheel to select.
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={()=>{ this.setState({ modal08: true })}}>
         <Image style= {{resizeMode:'contain',position: 'absolute', width: 51, height: 51, right: 199, top: 351}} source ={require("../assets/talk.png")}  />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={()=>{ this.setState({ modal10: true })}}>
+        
+        <MaterialIcons
+              style = {{left: 33, top: 700}}
+              name="help"
+              size={40}
+              color="#eaaa00"
+            />
+       <Text style={{ color: '#eaaa00',left: 30, top: 700 }}>  
+                   {""}  Help
+               </Text>
         </TouchableOpacity>
         </View>
        
