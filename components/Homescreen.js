@@ -63,11 +63,18 @@ export default class Homescreen extends Component {
             onPress={() => this.props.navigation.navigate('EcoCar Video')}
           />
           </View>
-          <View style={{position:'absolute',bottom:'15%',right:'30%',width: '40%', backgroundColor: '#EAAA00', borderRadius: 20}}>
+          <View style={{position:'absolute',bottom:'16%',left:'3%',width: '45%', backgroundColor: '#EAAA00', borderRadius: 20}}>
           <Button 
             color= "black"
             title="Interactive Wheel"
             onPress={() => this.props.navigation.navigate('Interactive Wheel')}
+          />
+          </View>
+          <View style={{position:'absolute',bottom:'16%',right:'4%',width: '45%', backgroundColor: '#EAAA00', borderRadius: 20}}>
+          <Button 
+            color= "black"
+            title="About Us"
+            onPress={() => this.props.navigation.navigate('About Us')}
           />
           </View>
           </ImageBackground>

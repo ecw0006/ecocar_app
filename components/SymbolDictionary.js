@@ -1,22 +1,128 @@
 // Test Test
 import React, { Component } from 'react';
-import { Button, View, Text, ScrollView, Image, ImageBackground } from 'react-native';
+import { Button, View, Text, ScrollView, Image, ImageBackground,TouchableOpacity, StyleSheet} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import Modal from "react-native-modal";
+import { useState } from 'react/cjs/react.development';
+import { useIsFocused } from "@react-navigation/native";
 
+function demo() {
+  const ref = React.useRef(null)
+
+  useIsFocused(ref)
+
+  return <ScrollView ref={ref}>{/* content */}</ScrollView>
+}
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    width: '100%', 
+    height: '100%'
+  },
+  image: {
+    flex: 1,
+  width: '100%',
+  height: '100%',
+  resizeMode: 'contain'
+  },
+  text: {
+    color: "white",
+    fontSize: 42,
+    fontWeight: "bold",
+    textAlign: "center",
+    backgroundColor: "#000000a0"
+  },
+  modalView: {
+    height: 400,
+    width: 400,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#C6C5B9"
+  },
+  modalstyle: {
+    flex: 1,
+            margin: 0,
+            justifyContent: "center",
+            alignItems: "center"
+  },
+  buttonOpen: {
+    backgroundColor: "#F194FF",
+  },
+  buttonClose: {
+    height: 30,
+                width: 180,
+                backgroundColor: "#62929E",
+                justifyContent: "center",
+                alignItems: "center",
+  },
+
+
+  
+  });
 
 export default class SymbolDictionary extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      modal01: false,
+      modal02: false,
+      modal03: false,
+      modal04: false,
+      modal05: false,
+      modal06: false,
+      modal07: false,
+      modal08: false,
+      modal09: false,
+      modal10: false,
+      modal11: false,
+      modal12: false,
+      modal13: false,
+      modal14: false,
+      modal15: false,
+      modal16: false,
+      modal17: false,
+      modal18: false,
+      modal19: false,
+      modal20: false,
+      modal21: false,
+      modal22: false,
+      modal23: false,
+      modal24: false,
+      modal25: false,
+      modal26: false,
+      modal27: false
+    };
+  }
+  
   render() {
+    
     return (
+      
       <View>
-      <ImageBackground source={require('../assets/blankhomeScreenv2.png')} style ={{width: "100%", height: "100%"}}>
-       <View style={{height: 838, top: 200}}>
+      <ImageBackground source={require('../assets/homeScreenv2.png')} style ={{width: "100%", height: "100%"}}>
+      <View style={{ flex: 1, backgroundColor:'#00000000',alignItems: 'center', paddingTop: 200, paddingHorizontal: 10}}>
+        <Text style={{ fontSize: 40, color: "#eaaa00" }}>Tap any symbol to find out more!</Text>
+        </View>
+       <View style={{height: 725, top: -42}}>
       <ScrollView contentContainerStyle={{flexGrow: 1}}>
-        <View style={{ flex: 1, backgroundColor:'#00000000', flexDirection:'column', alignItems: 'center', alignContent: 'center', justifyContent: 'center', paddingTop: 50, paddingHorizontal: 10}}>
-         
-          
-          <Image style={{width: 350, height: 200 }} source={require('../assets/ABSWarning.png')}/>
-          <Text style = {{fontSize: 30, color: 'white', paddingBottom: 50 }}>
-                  This light comes on briefly when the
+        <View style={{ flex: 1, backgroundColor:'#00000000', flexDirection:'column', alignItems: 'center', alignContent: 'center', justifyContent: 'center', paddingTop: 10, paddingHorizontal: 10}}>
+       
+       {/* ABS */}
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal01}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal01: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light comes on briefly when the
                   engine is started.
                   If the light does not come on, have it
                   fixed so it will be ready to warn if
@@ -40,24 +146,78 @@ export default class SymbolDictionary extends Component {
                   functioning and there is a problem
                   with the regular brakes. See your
                   dealer for service.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/ACC.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',  paddingBottom: 50 }}>
-                  This light is white when the Adaptive
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal01: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal01: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/ABSWarning.png')}/>
+          </TouchableOpacity>
+
+          {/* ACC  */}
+          <Modal
+          transparent={true}
+          isVisible={this.state.modal02}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal02: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light is white when the Adaptive
                   Cruise Control (ACC, if equipped) is
                   on and ready, and turns green when
                   the ACC is set and active.
-                </Text>
-          <Image style={{width: 350, height: 200 }} source={require('../assets/ACCGap.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  If equipped, this light indicates the
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal02: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal02: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/ACC.png')}/>
+          </TouchableOpacity>
+           
+         {/* Gap Light */}
+         <Modal
+          transparent={true}
+          isVisible={this.state.modal03}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal03: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            If equipped, this light indicates the
                   following gap setting (near, medium,
                   or far) for FCA, and, if equipped,
                   Adaptive Cruise Control (ACC).
-                </Text>  
-          <Image style={{width: 350, height: 200 }} source={require('../assets/AirbagReadiness.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light shows if there is an
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal03: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal03: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/ACCGap.png')}/>
+          </TouchableOpacity>
+          
+         {/* AirbagReadiness */}
+         <Modal
+          transparent={true}
+          isVisible={this.state.modal04}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal04: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light shows if there is an
                   electrical problem with the airbag
                   system. The system check includes
                   the airbag sensor(s), the passenger
@@ -65,20 +225,57 @@ export default class SymbolDictionary extends Component {
                   the airbag modules, the wiring, and
                   the crash sensing and diagnostic
                   module.
-                </Text>  
-          <Image style={{width: 350, height: 200 }} source={require('../assets/BrakeSystemWarning.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light should come on briefly
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal04: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal04: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/AirbagReadiness.png')}/>
+          </TouchableOpacity>
+
+
+      
+          {/* Brake */}
+          <Modal
+          transparent={true}
+          isVisible={this.state.modal05}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal05: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light should come on briefly
                   when the engine is started. If it does
                   not come on then, have it fixed so it
                   will be ready to warn you if there is
                   a problem.
                   If the light comes on and stays on,
                   there is a brake problem.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/ChargingSystem.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  The charging system light comes on
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal05: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal05: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/BrakeSystemWarning.png')}/>
+          </TouchableOpacity>
+       {/* ChargingSystem */}
+       <Modal
+          transparent={true}
+          isVisible={this.state.modal06}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal06: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            The charging system light comes on
                   briefly when the ignition is turned
                   on, but the engine is not running, as
                   a check to show the light is working.
@@ -91,34 +288,106 @@ export default class SymbolDictionary extends Component {
                   system. Have it checked by your
                   dealer. Driving while this light is on
                   could drain the battery.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/CheckEngine.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  If this light is on
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal06: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal06: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/ChargingSystem.png')}/>
+          </TouchableOpacity>
+        {/* CheckEngine */}
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal07}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal07: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            If this light is on
                   while the engine is running, a
                   malfunction has been detected and
                   the vehicle may require service. The
                   light should come on to show that it
                   is working when the ignition is in
-                  Service Mode
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/CruiseControl.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  The cruise control light is white
+                  Service Mode.
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal07: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal07: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/CheckEngine.png')}/>
+          </TouchableOpacity>
+         
+        {/* CruiseControl */}
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal08}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal08: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            The cruise control light is white
                   when the cruise control is on and
                   ready, and turns green when the
                   cruise control is set and active.
-                </Text>  
-          <Image style={{width: 350, height: 200 }} source={require('../assets/DoorAjar.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light comes on when a door is
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal08: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal08: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/CruiseControl.png')}/>
+          </TouchableOpacity>
+
+          {/* DoorAjar */}
+          <Modal
+          transparent={true}
+          isVisible={this.state.modal09}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal09: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light comes on when a door is
                   open or not securely latched. Before
                   driving, check that all doors are
                   properly closed.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/DriverSeatbelt.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  When the vehicle is started, this
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal09: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal09: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/DoorAjar.png')}/>
+          </TouchableOpacity>
+
+
+       {/* DriverSeatbelt */}
+       <Modal
+          transparent={true}
+          isVisible={this.state.modal10}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal10: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            When the vehicle is started, this
                   light flashes and a chime may come
                   on to remind the driver to fasten
                   their seat belt. Then the light stays
@@ -127,19 +396,54 @@ export default class SymbolDictionary extends Component {
                   times if the driver remains or
                   becomes unbuckled while the
                   vehicle is moving.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/ElectricParkingBrake.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  The Electric Parking Brake (EPB)
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal10: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal10: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/DriverSeatbelt.png')}/>
+          </TouchableOpacity>
+
+        {/* Park */}
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal11}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal11: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            The Electric Parking Brake (EPB)
                   status light comes on when the
                   parking brake is applied. If the light
                   continues flashing after the EPB is
                   released, or while driving, there is a
                   problem with the EPB system
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/EngineOilPressure.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light should come on briefly as
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal11: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal11: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/ElectricParkingBrake.png')}/>
+          </TouchableOpacity>
+         {/* Engine Oil */}
+         <Modal
+          transparent={true}
+          isVisible={this.state.modal12}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal12: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light should come on briefly as
                   the engine is started. If it does not
                   come on, have the vehicle serviced
                   by your dealer.
@@ -149,26 +453,97 @@ export default class SymbolDictionary extends Component {
                   could be low on oil and might have
                   some other system problem. See
                   your dealer.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/HighBeamOn.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light comes on when the
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal12: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal12: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/EngineOilPressure.png')}/>
+          </TouchableOpacity>
+
+         {/* High Beam */}
+         <Modal
+          transparent={true}
+          isVisible={this.state.modal13}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal13: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light comes on when the
                   high-beam headlamps are in use.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/IntellibeamLight.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light comes on when the
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal13: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal13: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/HighBeamOn.png')}/>
+          </TouchableOpacity>
+
+          {/* Intellibeam */}
+          <Modal
+          transparent={true}
+          isVisible={this.state.modal14}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal14: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light comes on when the
                   IntelliBeam system, if equipped, is
-                  enabled. 
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/LampsOnReminder.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light comes on when the
+                  enabled.
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal14: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal14: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/IntellibeamLight.png')}/>
+          </TouchableOpacity>
+          {/* Lamps on */}
+          <Modal
+          transparent={true}
+          isVisible={this.state.modal15}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal15: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light comes on when the
                   exterior lamps are in use.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/LaneKeepAssist.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light is green if LKA is available
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal15: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal15: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/LampsOnReminder.png')}/>
+          </TouchableOpacity> 
+
+          {/* Lane keep assist */}
+          <Modal
+          transparent={true}
+          isVisible={this.state.modal16}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal16: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light is green if LKA is available
                   to assist.
                   LKA may assist by gently turning
                   the steering wheel if the vehicle
@@ -180,10 +555,29 @@ export default class SymbolDictionary extends Component {
                   Lane Departure Warning (LDW)
                   alert, to indicate that the lane
                   marking has been crossed.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/LowFuelWarning.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light is near the fuel gauge and
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal16: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal16: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/LaneKeepAssist.png')}/>
+          </TouchableOpacity>
+
+
+         {/* Low Fuel */}
+         <Modal
+          transparent={true}
+          isVisible={this.state.modal17}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal17: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light is near the fuel gauge and
                   comes on briefly when the ignition is
                   turned on as a check to show it is
                   working.
@@ -191,10 +585,29 @@ export default class SymbolDictionary extends Component {
                   is low on fuel. The light turns off
                   when fuel is added. If it does not,
                   have the vehicle serviced.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/PassengerSeatbelt.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                   When the vehicle is started, this
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal17: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal17: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/LowFuelWarning.png')}/>
+          </TouchableOpacity> 
+
+
+         {/* Passenger Seatbelt */}
+         <Modal
+          transparent={true}
+          isVisible={this.state.modal18}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal18: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            When the vehicle is started, this
                   light flashes and a chime may come
                   on to remind passengers to fasten
                   their seat belt. Then the light stays
@@ -203,17 +616,53 @@ export default class SymbolDictionary extends Component {
                   the passenger remains or becomes
                   unbuckled while the vehicle is
                   moving.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/PedestrianAhead.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  If equipped, this indicator will
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal18: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal18: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/PassengerSeatbelt.png')}/>
+          </TouchableOpacity> 
+          
+          {/* Pedestrian Ahead */}
+         <Modal
+          transparent={true}
+          isVisible={this.state.modal19}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal19: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            If equipped, this indicator will
                   display amber when a nearby
                   pedestrian is detected directly in
                   front of the vehicle.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/Security.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  The security light should come on
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal19: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal19: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/PedestrianAhead.png')}/>
+          </TouchableOpacity> 
+          
+           {/* Security */}
+         <Modal
+          transparent={true}
+          isVisible={this.state.modal20}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal20: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            The security light should come on
                   briefly as the engine is started. If it
                   does not come on, have the vehicle
                   serviced by your dealer. If the
@@ -223,10 +672,28 @@ export default class SymbolDictionary extends Component {
                   does not start, there could be a
                   problem with the theft-deterrent
                   system.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/ServiceElectricParkingBrake.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  On some vehicles the service
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal20: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal20: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/Security.png')}/>
+          </TouchableOpacity> 
+
+        {/* Service park break */}
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal21}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal21: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            On some vehicles the service
                   electric parking brake light should
                   come on briefly when the vehicle is
                   started. If it does not come on, have
@@ -238,10 +705,28 @@ export default class SymbolDictionary extends Component {
                   If this light stays on, the vehicle
                   should be taken to a dealer as soon
                   as possible.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/StabiliTrak.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light comes on briefly when the
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal21: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal21: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/ServiceElectricParkingBrake.png')}/>
+          </TouchableOpacity> 
+
+          {/* StabiliTrak */}
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal22}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal22: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light comes on briefly when the
                   engine is started.
                   If the light does not come on, have
                   the vehicle serviced by your dealer.
@@ -259,10 +744,28 @@ export default class SymbolDictionary extends Component {
                   If the light is on and flashing, the
                   TCS and/or the StabiliTrak/ESC
                   system is actively working.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/StabiliTrakOff.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light comes on briefly while
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal22: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal22: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/StabiliTrak.png')}/>
+          </TouchableOpacity> 
+         
+         {/* StabiliTrak OFF */}
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal23}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal23: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light comes on briefly while
                   starting the engine. If it does not,
                   have the vehicle serviced by your
                   dealer.
@@ -277,10 +780,28 @@ export default class SymbolDictionary extends Component {
                   TCS and the StabiliTrak/ESC
                   systems, and the warning light
                   turns off.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/TirePressure.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  For vehicles with the Tire Pressure
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal23: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal23: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/StabiliTrakOff.png')}/>
+          </TouchableOpacity> 
+
+           {/*  Tire pressure */}
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal24}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal24: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            For vehicles with the Tire Pressure
                   Monitor System (TPMS), this light
                   comes on briefly when the engine is
                   started. It provides information
@@ -296,17 +817,53 @@ export default class SymbolDictionary extends Component {
                   problem with the TPMS. If the
                   problem is not corrected, the light
                   will come on at every ignition cycle.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/TowMode.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  For vehicles with the Tow/Haul
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal24: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal24: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/TirePressure.png')}/>
+          </TouchableOpacity> 
+
+           {/*  Tow Mode */}
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal25}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal25: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            For vehicles with the Tow/Haul
                   Mode feature, this light comes on
                   when the Tow/Haul Mode has been
                   activated.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/TractionOff.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  This light comes on briefly while
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal25: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal25: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/TowMode.png')}/>
+          </TouchableOpacity>
+
+           {/*  Traction OFF */}
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal26}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal26: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            This light comes on briefly while
                   starting the engine. If it does not,
                   have the vehicle serviced by your
                   dealer. If the system is working
@@ -325,15 +882,42 @@ export default class SymbolDictionary extends Component {
                   be limited when necessary to
                   protect the driveline from damage.
                   Adjust driving accordingly.
-                </Text> 
-          <Image style={{width: 350, height: 200 }} source={require('../assets/VehicleAheadIndicator.png')}/>
-          <Text style = {{fontSize: 30, color: 'white',paddingBottom: 50}}>
-                  If equipped, this indicator will
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal26: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal26: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/TractionOff.png')}/>
+          </TouchableOpacity>
+         
+         {/*  Traction OFF */}
+        <Modal
+          transparent={true}
+          isVisible={this.state.modal27}
+          style={styles.modalstyle}
+          animationIn={"slideInRight"} // <---
+          animationOut={"slideOutLeft"}
+          onBackdropPress={() => { this.setState({ modal27: false });}}
+        >
+          <View style={styles.modalView}>
+            <Text style={{ color: "#4A6D7C", fontSize: 15, marginBottom: 60, marginLeft: 10, marginRight: 10 }}>
+            If equipped, this indicator will
                   display green when a vehicle is
                   detected ahead and amber when
                   you are following a vehicle ahead
                   much too closely.
-                </Text>                                                              
+            </Text>
+            <TouchableOpacity style={styles.buttonClose} onPress={() => this.setState({ modal27: false })}>
+              <Text style={{ color: "#C6C5B9" }}>Got it!</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+        <TouchableOpacity style={styles.button} onPress={() => this.setState({ modal27: true })}>
+        <Image style={{width: 350, height: 200 }} source={require('../assets/VehicleAheadIndicator.png')}/>
+          </TouchableOpacity>
+                                                                      
           
         </View>
       </ScrollView>

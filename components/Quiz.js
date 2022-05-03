@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Button, View, Text,StyleSheet, ScrollView, ImageBackground} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-
+import { Alert } from 'react-native';
 
 export default class Quiz extends Component {
+  
   render() {
+    
     return (
       <View>
       <ImageBackground source={require('../assets/blankhomeScreenv2.png')} style ={{width: "100%", height: "100%"}}>
@@ -27,7 +29,7 @@ export default class Quiz extends Component {
                 textStyle={{textDecorationLine: "none"}}
                 iconStyle={{ borderColor: "#FFFFFF" }}
                 onPress={(isChecked) => {
-                  alert("This is partially correct, but ACC has more than just one function.");
+                  Alert.alert("Incorrect","This is partially correct, but ACC has more than just one function.");
               }}
               />
               </View>
@@ -41,7 +43,7 @@ export default class Quiz extends Component {
                 textStyle={{textDecorationLine: "none"}}
                 iconStyle={{ borderColor: "#FFFFFF" }}
                 onPress={(isChecked) => {
-                  alert("This is partially correct, but ACC has more than just one function.");
+                  Alert.alert("Incorrect","This is partially correct, but ACC has more than just one function.");
                 }}
               />
               </View>
@@ -55,7 +57,7 @@ export default class Quiz extends Component {
                 textStyle={{textDecorationLine: "none"}}
                 iconStyle={{ borderColor: "#FFFFFF" }}
                 onPress={(isChecked) => {
-                  alert("Correct! Good Job");
+                  Alert.alert("Correct", "Good Job!");
                 }}
               />
               </View>
@@ -69,7 +71,7 @@ export default class Quiz extends Component {
                 textStyle={{textDecorationLine: "none"}}
                 iconStyle={{ borderColor: "#FFFFFF" }}
                 onPress={(isChecked) => {
-                  alert("One of the answers above is correct.");
+                  Alert.alert("Incorrect","One of the answers above is correct.");
                 }}
               />
               </View>
@@ -89,7 +91,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Correct! Great Job");
+      Alert.alert("Correct", "Good Job!");
       
     }}
   />
@@ -103,7 +105,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Not quite, there is a button you press to turn on ACC.");
+      Alert.alert("Incorrect","Not quite, there is a button you press to turn on ACC.");
     }}
   />
   </View>
@@ -116,7 +118,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Not quite, there is a button you press to turn on ACC.");
+      Alert.alert("Incorrect","Not quite, there is a button you press to turn on ACC.");
     }}
   />
   </View>
@@ -129,7 +131,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("One of the above questions is correct.");
+      Alert.alert("Incorrect","One of the above questions is correct.");
     }}
   />
   </View>
@@ -153,7 +155,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Not Quite, The ACC should only be used in safe situations.");
+      Alert.alert("Incorrect","Not Quite, The ACC should only be used in safe situations.");
     }}
   />
   </View>
@@ -166,7 +168,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Not Quite, The ACC should only be used in safe situations.");
+      Alert.alert("Incorrect","Not Quite, The ACC should only be used in safe situations.");
     }}
   />
   </View>
@@ -180,7 +182,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Correct! Good Job");
+      Alert.alert("Correct", "Good Job!");
       
     }}
   />
@@ -194,7 +196,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Not Quite, There are certain situations that are unfavorable for ACC.");
+      Alert.alert("Incorrect","Not Quite, There are certain situations that are unfavorable for ACC.");
     }}
   />
   </View>
@@ -218,7 +220,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Not quite, the driver should always be present in the driver seat while the vehicle is operating.");
+      Alert.alert("Incorrect","Not quite, the driver should always be present in the driver seat while the vehicle is operating.");
     }}
   />
   </View>
@@ -232,7 +234,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Correct! Good Job");
+      Alert.alert("Correct", "Good Job!");
       
     }}
   />
@@ -247,7 +249,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Not Quite, ACC is more focused on safety.");
+      Alert.alert("Incorrect","Not Quite, ACC is more focused on safety.");
     }}
   />
   </View>
@@ -260,7 +262,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Not Quite, ACC is more focused on safety rather than teaching.");
+      Alert.alert("Incorrect","Not Quite, ACC is more focused on safety rather than teaching.");
     }}
   />
   </View>
@@ -283,7 +285,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Correct");
+      Alert.alert("Correct");
       
     }}
   />
@@ -297,7 +299,7 @@ export default class Quiz extends Component {
     textStyle={{textDecorationLine: "none"}}
     iconStyle={{ borderColor: "#FFFFFF" }}
     onPress={(isChecked) => {
-      alert("Incorrect");
+      Alert.alert("Incorrect");
     }}
   />
   </View>
@@ -340,7 +342,7 @@ export default class Quiz extends Component {
 
           </View>
         </View> */}
-
+  
       </ScrollView>
       </View>
       </ImageBackground>
@@ -348,5 +350,6 @@ export default class Quiz extends Component {
 
 
     )
+    this.forceUpdate();
   }
 }

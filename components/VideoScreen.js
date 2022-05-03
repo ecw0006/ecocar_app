@@ -22,7 +22,7 @@ export default class VideoScreen extends Component {
         </Text>
         
         </View>
-        <View style ={{position: 'absolute', top: '30%', left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center', backgroundColor: '#EAAA00', height: '40%', width: "100%",}}>
+        <View style ={{position: 'absolute', top: '30%', left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center', backgroundColor: '#EAAA00', height: "44%", width: "100%",}}>
 
         <YoutubePlayer
         height = '93%'
