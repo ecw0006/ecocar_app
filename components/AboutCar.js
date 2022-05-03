@@ -23,7 +23,12 @@ export default class AboutUs extends Component {
           <Text style = {{color: 'white',fontSize: 20, textAlign:'left'}}>To complete these tasks, we added a MicroAutobox from DSAPCE along with an Intel IoT Tank for our main processing units.</Text>
 
         </View>
-       
+        <View style={{position:'absolute', bottom:'15%',left:'25%',width: '50%',backgroundColor: '#EAAA00', borderRadius: 20}}>
+          <Button color= "black"
+            title="V2X Technology"
+            onPress={() => this.props.navigation.navigate('V2X')}
+          />
+          </View>
           
           
           

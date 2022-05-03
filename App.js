@@ -7,6 +7,7 @@ import Homescreen from './components/Homescreen';
 import SymbolDictionary from './components/SymbolDictionary';
 import VideoScreen from './components/VideoScreen';
 import Quiz from './components/Quiz';
+import V2X from './components/V2X';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -345,11 +346,11 @@ export default function App() {
             height: 0
           }
         })} />
-         <Drawer.Screen name="About the Competition" component={AboutComp} options={({navigation})=>({
+         <Drawer.Screen name="V2X" component={V2X} options={({navigation})=>({
            headerShown: true,
            headerLeft: () => (
             <View style={{ flex: 1, left:20 }}>
-            <TouchableOpacity onPress={() => navigation.navigate('About Us')}>
+            <TouchableOpacity onPress={() => navigation.navigate('About the Car')}>
              <AntDesign
               name="back"
               size={50}
